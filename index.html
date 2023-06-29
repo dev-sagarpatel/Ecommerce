@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/css/common.css" />
+    <title>Home</title>
+  </head>
+  <body class="home-page">
+    <header class="header-section">
+      <nav>
+        <div class="left-nav">
+          <button class="menu-button">
+            <img src="assets/images/header/menu open.svg" alt="" />
+          </button>
+
+          <button class="close-button hide">
+            <img src="assets/images/header/menu close.svg" alt="" />
+          </button>
+
+          <img src="./assets/images/logo.svg" alt="logo" class="logo" />
+        </div>
+        <div class="center-nav">
+          <fieldset>
+            <input
+              type="text"
+              placeholder="Search for products, categories..."
+            />
+            <button>
+              <img src="./assets//images/header/search.svg" alt="search" />
+            </button>
+          </fieldset>
+        </div>
+
+        <div class="right-nav">
+          <button class="mobile-search">
+            <img src="./assets//images/header/search.svg" alt="search" />
+          </button>
+          <select class="country-select">
+            <option value="">Cool</option>
+          </select>
+          <img
+            src="./assets/images/header/Garage.svg"
+            alt="Garage"
+            class="mobile-hide"
+          />
+          <img
+            src="./assets/images/header/Store.svg"
+            alt="Store"
+            class="mobile-hide"
+          />
+          <img src="./assets/images/header/Profile.svg" alt="Profile" />
+
+          <div class="cart-img">
+            <img src="./assets/images/header/cart.svg" alt="cart" />
+            <p>0</p>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="main-block"></main>
+    <footer class="footer-section">
+      <div class="top-part"></div>
+      <div class="bottom-part">
+        <div class="container">
+          <div class="inner-content">
+            <div class="left-part">
+              <img src="./assets/images/footer/copyright.svg" alt="copyright" />
+              <p>2023 Superior Engineering. All Rights Reserved</p>
+            </div>
+            <div class="right-part">
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".country-select").select2({
+          minimumResultsForSearch: Infinity,
+        });
+      });
+
+      const menuButton = document.querySelector(".menu-button");
+      const closeButton = document.querySelector(".close-button");
+
+      menuButton.addEventListener("click", () => {
+        menuButton.classList.add("hide");
+        closeButton.classList.remove("hide");
+      });
+
+      closeButton.addEventListener("click", () => {
+        menuButton.classList.remove("hide");
+        closeButton.classList.add("hide");
+      });
+    </script>
+  </body>
+</html>
