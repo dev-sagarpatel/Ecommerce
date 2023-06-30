@@ -79,7 +79,7 @@
         </div>
         <div class="content-part">
           <div class="row custom-row">
-            <div class="col-lg-3 col-md-6 col-12">
+            <div class="col-lg-3 col-sm-6 col-12">
               <div class="product-part">
                 <h5 class="category-heading">4X4 SUSPENSION</h5>
                 <ul class="category-list">
@@ -105,7 +105,7 @@
                 <a class="more-btn" href="#">PLUS MORE...</a>
               </div>
             </div>
-            <div class="col-lg-3 col-md-6 col-12">
+            <div class="col-lg-3 col-sm-6 col-12">
               <div class="product-part">
                 <h5 class="category-heading">4x4 DRIVELINE</h5>
                 <ul class="category-list">
@@ -140,7 +140,7 @@
                 <a class="more-btn" href="#">PLUS MORE...</a>
               </div>
             </div>
-            <div class="col-lg-3 col-md-6 col-12">
+            <div class="col-lg-3 col-sm-6 col-12">
               <div class="product-part">
                 <h5 class="category-heading">4x4 ACCESSORIES</h5>
                 <ul class="category-list">
@@ -177,7 +177,7 @@
                 <a class="more-btn" href="#">PLUS MORE...</a>
               </div>
             </div>
-            <div class="col-lg-3 col-md-6 col-12">
+            <div class="col-lg-3 col-sm-6 col-12">
               <div class="product-part">
                 <h5 class="category-heading">BUGGY/RACING</h5>
                 <ul class="category-list">
@@ -334,12 +334,6 @@
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <script src="./assets/js/bootstrap.bundle.min.js"></script>
     <script>
-      // $(document).ready(function () {
-      //   $(".country-select").select2({
-      //     minimumResultsForSearch: Infinity,
-      //   });
-      // });
-
       $(document).ready(function () {
         // Create an array of country objects with image and text properties
         var countries = [
@@ -370,7 +364,6 @@
           },
         ];
 
-        // Convert the country objects to select2 option format
         var options = countries.map(function (country) {
           return {
             id: country.id,
@@ -379,15 +372,13 @@
           };
         });
 
-        // Initialize the select2 with the dynamic options
         $(".country-select").select2({
           minimumResultsForSearch: Infinity,
           data: options,
-          templateResult: formatCountryOption, // Custom function to format option with image
-          templateSelection: formatSelectedCountry, // Custom function to format selected option with image
+          templateResult: formatCountryOption, 
+          templateSelection: formatSelectedCountry,
         });
 
-        // Custom function to format an option with image
         function formatCountryOption(country) {
           if (!country.image) {
             return country.text;
@@ -401,7 +392,6 @@
           );
         }
 
-        // Custom function to format the selected option with image
         function formatSelectedCountry(country) {
           if (!country.image) {
             return country.text;

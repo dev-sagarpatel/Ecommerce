@@ -215,11 +215,11 @@ b {
   top: 50%;
   width: 0;
 }
-.select2-container--open .select2-dropdown--below{
+.select2-container--open .select2-dropdown--below {
   width: 150px !important;
   margin-top: 10px;
 }
-.select2-container--default .select2-results>.select2-results__options{
+.select2-container--default .select2-results > .select2-results__options {
   width: 150px;
 }
 .select2-container--default
@@ -552,7 +552,88 @@ b {
   background-color: white;
 }
 
-@media (max-width: 1080px) {
+@media screen and (max-width: 1600px) {
+  .footer-section .top-part .content-part .product-part .category-heading {
+    font-size: 22px;
+  }
+  .footer-section
+    .top-part
+    .content-part
+    .product-part
+    .category-list
+    .category-link {
+    font-size: 18px;
+  }
+  .footer-section .top-part .content-part .product-part .more-btn {
+    font-size: 18px;
+  }
+  .footer-section .top-part .info-part .pages-link-part .p-link {
+    font-size: 22px;
+  }
+  .footer-section .info-part .company-details .detail-group .detail {
+    font-size: 16px;
+  }
+  .footer-section .bottom-part .inner-content .footer-link {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .footer-section .top-part .content-part .product-part .category-heading {
+    font-size: 20px;
+  }
+  .footer-section
+    .top-part
+    .content-part
+    .product-part
+    .category-list
+    .category-link {
+    font-size: 16px;
+  }
+  .footer-section .top-part .content-part .product-part .more-btn {
+    font-size: 16px;
+  }
+  .footer-section .top-part .info-part .pages-link-part .p-link {
+    font-size: 18px;
+  }
+  .footer-section .info-part .company-details .detail-group .detail {
+    font-size: 14px;
+  }
+  .footer-section .bottom-part .inner-content .footer-link {
+    font-size: 16px;
+  }
+  .footer-section .top-part .info-part .payment-support .box h6 {
+    font-size: 24px;
+  }
+  .footer-section .top-part .info-part .payment-support .box {
+    padding: 10px 25px;
+  }
+  .footer-section .top-part .info-part .payment-support .box .payment-gateways {
+    padding: 0 10px;
+  }
+  .footer-section .top-part .info-part .socialmedia-link-part .f-link img {
+    width: 75%;
+  }
+  .footer-section .info-part .company-details .detail-group img {
+    width: 8%;
+  }
+  .footer-section
+    .top-part
+    .info-part
+    .payment-support
+    .box
+    .payment-gateways
+    img {
+    height: 45%;
+  }
+  .footer-section .bottom-part .inner-content .right-part {
+    padding-left: 0;
+  }
+  .footer-section .bottom-part .inner-content .left-part p {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 1080px) {
   .header-section .center-nav fieldset {
     display: none;
   }
@@ -580,5 +661,191 @@ b {
 
   .header-section .mobile-hide {
     display: none;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .footer-section .top-part .logo-part .logo {
+    width: 35%;
+  }
+  .footer-section .top-part .content-part .custom-row {
+    row-gap: 35px;
+  }
+  .footer-section .top-part .content-part .col-sm-6 {
+    display: flex;
+    justify-content: center;
+  }
+  .footer-section .top-part .content-part .product-part .category-list {
+    margin-top: 0;
+  }
+  .footer-section .top-part .info-part {
+    margin: 35px 0;
+    gap: 40px;
+  }
+  .footer-section .top-part .info-part .custom-row {
+    row-gap: 35px;
+  }
+  .footer-section .top-part .info-part .pages-link-part {
+    justify-content: center;
+    column-gap: 25px;
+  }
+  .footer-section .top-part .info-part .socialmedia-link-part {
+    justify-content: center;
+    column-gap: 20px;
+    max-width: 100%;
+  }
+  .footer-section .info-part .company-details {
+    flex-direction: row;
+    max-width: 100%;
+    justify-content: center;
+  }
+  .footer-section .info-part .company-details .detail-group {
+    align-items: center;
+    flex: 1;
+    justify-content: center;
+  }
+  .footer-section .info-part .company-details .detail-group .detail br {
+    display: none;
+  }
+  .footer-section .bottom-part .inner-content .left-part p {
+    font-size: 12px;
+  }
+  .footer-section .bottom-part .inner-content .footer-link {
+    font-size: 12px;
+  }
+  .footer-section .bottom-part .inner-content .footer-link::before {
+    height: 16px;
+  }
+  .footer-section .bottom-part .inner-content .right-part img {
+    width: 18%;
+  }
+  .footer-section .bottom-part .inner-content .left-part img {
+    height: 18px;
+    width: auto;
+  }
+  .footer-section .bottom-part .inner-content {
+    padding: 1.5rem 0;
+  }
+  .header-section .right-nav {
+    margin-left: 0;
+  }
+  .header-section nav {
+    gap: 0;
+  }
+  .header-section .right-nav {
+    gap: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header-section .right-nav {
+    display: none;
+  }
+  .footer-section .bottom-part .inner-content {
+    flex-direction: column-reverse;
+    gap: 15px;
+    padding: 1rem 0;
+  }
+  .footer-section .top-part .logo-part .logo {
+    width: 50%;
+    padding: 45px 0 20px;
+  }
+  .footer-section .top-part .content-part .product-part .category-heading {
+    font-size: 16px;
+  }
+  .footer-section
+    .top-part
+    .content-part
+    .product-part
+    .category-list
+    .category-link,
+  .footer-section .top-part .content-part .product-part .more-btn {
+    font-size: 14px;
+  }
+  .footer-section .top-part .info-part .pages-link-part .p-link {
+    font-size: 16px;
+  }
+  .footer-section .top-part .info-part .custom-row {
+    row-gap: 20px;
+  }
+  .footer-section .top-part .info-part .payment-support .box h6 {
+    font-size: 20px;
+  }
+  .footer-section
+    .top-part
+    .info-part
+    .payment-support
+    .box
+    .payment-gateways
+    img {
+    height: 35px;
+  }
+  .footer-section .info-part .company-details .detail-group .detail {
+    font-size: 12px;
+  }
+  .footer-section .info-part .company-details .detail-group {
+    gap: 10px;
+  }
+  .footer-section .top-part .info-part {
+    margin: 20px 0;
+    gap: 30px;
+  }
+  .footer-section .info-part .company-details{
+    gap: 20px;
+  }
+  .header-section nav{
+    padding: 1.5rem 1rem;
+  }
+}
+
+
+@media screen and (max-width: 576px) {
+  .footer-section .top-part .content-part .col-sm-6{
+    justify-content: flex-start;
+  }
+  .footer-section .top-part .logo-part{
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+  }
+  .footer-section .top-part .logo-part .logo{
+    padding-bottom: 0;
+  }
+  .footer-section .top-part .content-part{
+    margin-top: 20px;
+  }
+  .footer-section .top-part .content-part .custom-row{
+    row-gap: 20px;
+  }
+  .footer-section .top-part .content-part .product-part{
+    gap: 15px;
+  }
+  .footer-section .top-part .info-part .pages-link-part{
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .footer-section .top-part .info-part .payment-support{
+    display: none;
+  }
+  .footer-section .top-part .info-part{
+    gap: 20px;
+  }
+  .footer-section .info-part .company-details{
+    margin-top: -20px;
+    flex-direction: column;
+  }
+  .footer-section .info-part .company-details .detail-group{
+    justify-content: flex-start;
+    gap: 10px;
+  }
+  .footer-section .info-part .company-details .detail-group img{
+    width: auto;
+    height: 15px;
+  }
+  .footer-section .top-part .logo-part .line{
+    width: 50%;
+  }
+  .footer-section .info-part .company-details{
+    gap: 15px;
   }
 }
