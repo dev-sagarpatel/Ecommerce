@@ -312,7 +312,9 @@ b {
   top: 100%;
   z-index: 100;
 }
-
+/* .menu-active {
+  color: var(--primary-color);
+} */
 .menu-modal {
   left: 0;
   padding-left: 50px;
@@ -344,6 +346,7 @@ li {
   left: 400px;
   background-color: #e6e6e6;
   padding: 30px;
+  top: 0;
 }
 
 .common-title h2 {
@@ -369,8 +372,11 @@ li {
   justify-content: space-between;
   cursor: pointer;
   font-weight: 500;
+  color: #393939;
 }
-
+.menu-modal-two li.menu-active {
+  color: var(--primary-color);
+}
 .common-title div {
   display: flex;
   align-items: center;
@@ -383,9 +389,14 @@ li {
 }
 
 .menu-modal-three {
-  left: 800px;
+  left: 400px;
   background-color: #cac8c8;
   padding: 30px;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start !important;
+  justify-content: center !important;
 }
 
 .menu-modal-three ul {
