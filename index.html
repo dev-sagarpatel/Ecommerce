@@ -41,25 +41,30 @@
           <button class="mobile-search">
             <img src="./assets//images/header/search.svg" alt="search" />
           </button>
-          <select class="country-select">
-            <option value="">Cool</option>
-          </select>
-          <img
-            src="./assets/images/header/Garage.svg"
-            alt="Garage"
-            class="mobile-hide"
-          />
-          <img
-            src="./assets/images/header/Store.svg"
-            alt="Store"
-            class="mobile-hide"
-          />
-          <img src="./assets/images/header/Profile.svg" alt="Profile" />
-
-          <div class="cart-img">
-            <img src="./assets/images/header/cart.svg" alt="cart" />
-            <p>0</p>
-          </div>
+          <select class="country-select"></select>
+          <a href="#" class="page-nav-btn">
+            <img
+              src="./assets/images/header/Garage.svg"
+              alt="Garage"
+              class="mobile-hide"
+            />
+          </a>
+          <a href="#" class="page-nav-btn">
+            <img
+              src="./assets/images/header/Store.svg"
+              alt="Store"
+              class="mobile-hide"
+            />
+          </a>
+          <a href="#" class="page-nav-btn">
+            <img src="./assets/images/header/Profile.svg" alt="Profile" />
+          </a>
+          <a href="#" class="page-nav-btn">
+            <div class="cart-img">
+              <img src="./assets/images/header/cart.svg" alt="cart" />
+              <p>0</p>
+            </div>
+          </a>
         </div>
       </nav>
     </header>
@@ -297,8 +302,7 @@
                     alt="address"
                   />
                   <p class="detail">
-                    8 Chrome Crt
-                    Burpengary <br />QLD 4505 Australia
+                    8 Chrome Crt Burpengary <br />QLD 4505 Australia
                   </p>
                 </div>
               </div>
@@ -330,12 +334,89 @@
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <script src="./assets/js/bootstrap.bundle.min.js"></script>
     <script>
+      // $(document).ready(function () {
+      //   $(".country-select").select2({
+      //     minimumResultsForSearch: Infinity,
+      //   });
+      // });
+
       $(document).ready(function () {
+        // Create an array of country objects with image and text properties
+        var countries = [
+          {
+            id: "aus",
+            text: "AUS",
+            image: "./assets/images/header/australia-flag-icon.svg",
+          },
+          {
+            id: "ind",
+            text: "IND",
+            image: "./assets/images/header/india-flag-icon.svg",
+          },
+          {
+            id: "usa",
+            text: "USA",
+            image: "./assets/images/header/united-states-flag-icon.svg",
+          },
+          {
+            id: "uk",
+            text: "UK",
+            image: "./assets/images/header/united-kingdom-flag-icon.svg",
+          },
+          {
+            id: "ca",
+            text: "CA",
+            image: "./assets/images/header/canada-flag-icon.svg",
+          },
+        ];
+
+        // Convert the country objects to select2 option format
+        var options = countries.map(function (country) {
+          return {
+            id: country.id,
+            text: country.text,
+            image: country.image,
+          };
+        });
+
+        // Initialize the select2 with the dynamic options
         $(".country-select").select2({
           minimumResultsForSearch: Infinity,
+          data: options,
+          templateResult: formatCountryOption, // Custom function to format option with image
+          templateSelection: formatSelectedCountry, // Custom function to format selected option with image
         });
-      });
 
+        // Custom function to format an option with image
+        function formatCountryOption(country) {
+          if (!country.image) {
+            return country.text;
+          }
+          return $(
+            '<span><img class="flag-icon" src="' +
+              country.image +
+              '" /> ' +
+              country.text +
+              "</span>"
+          );
+        }
+
+        // Custom function to format the selected option with image
+        function formatSelectedCountry(country) {
+          if (!country.image) {
+            return country.text;
+          }
+          return $(
+            '<span><img class="flag-icon" src="' +
+              country.image +
+              '" /> ' +
+              country.text +
+              "</span>"
+          );
+        }
+      });
+    </script>
+    <script>
       const menuButton = document.querySelector(".menu-button");
       const closeButton = document.querySelector(".close-button");
 
