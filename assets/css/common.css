@@ -85,6 +85,7 @@ b {
   padding: 1rem 2rem;
   grid-template-columns: 330px 1fr 400px;
   gap: 2rem;
+  position: relative;
 }
 
 .header-section .menu-button,
@@ -302,6 +303,104 @@ b {
 }
 
 /* ------- header section css end ------- */
+
+/* ------- Menu modal section css start ------- */
+.common {
+  width: 400px;
+  position: absolute;
+  height: 350px;
+  top: 100%;
+  z-index: 100;
+}
+
+.menu-modal {
+  left: 0;
+  padding-left: 50px;
+  padding-right: 40px;
+  background-color: #fff;
+}
+
+.menu-modal ul {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+li {
+  list-style: none;
+}
+
+.menu-modal li {
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  color: #36c5ff;
+}
+
+.menu-modal-two {
+  left: 400px;
+  background-color: #e6e6e6;
+  padding: 30px;
+}
+
+.common-title h2 {
+  font-size: 25px;
+}
+
+.common-title h3 {
+  font-size: 18px;
+  margin-top: 2rem;
+}
+
+.common-title ul {
+  padding-left: 0;
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.menu-modal-two li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.common-title div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.common-title button {
+  border: none;
+  background-color: transparent;
+}
+
+.menu-modal-three {
+  left: 800px;
+  background-color: #cac8c8;
+  padding: 30px;
+}
+
+.menu-modal-three ul {
+  gap: 3px !important;
+}
+
+.menu-modal-three li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+/* ------- Menu modal section css end ------- */
+
 /* ------- footer section css start ------- */
 .footer-section {
   width: 100%;
