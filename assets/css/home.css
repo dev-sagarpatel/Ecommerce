@@ -1,6 +1,7 @@
 /* -----common css start------ */
 .main-block .custom-container {
   display: flex;
+  flex-direction: column;
   width: 100%;
   max-width: 95%;
   margin: 0 auto;
@@ -13,7 +14,7 @@
   justify-content: center;
   gap: 15px;
 }
-.main-block .section-heading-block .section-heading {
+.main-block .section-heading-block .section-heading-text {
   color: #1e1c1c;
   text-align: center;
   font-size: 50px;
@@ -21,7 +22,38 @@
   font-weight: 700;
   text-transform: uppercase;
 }
+.main-block .section-heading-block .head-text-underline {
+  display: flex;
+  width: 15%;
+  align-items: center;
+  justify-content: center;
+  height: 5px;
+  background-color: var(--primary-color);
+}
+.main-block .shop-btn {
+  all: unset;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 14px 53px;
+  background-color: var(--primary-color);
+  color: #fff;
+  font-size: 20px;
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: 400;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.main-block .shop-btn:hover {
+  transform: scale(0.98);
+  opacity: 0.9;
+}
 /* -----common css end------ */
+
 /* ------- hero section css start ------- */
 .main-block .hero-section {
   width: 100%;
@@ -34,6 +66,7 @@
   width: 100%;
 }
 /* ------- hero section css end ------- */
+
 /* ------- category section css start ------- */
 .main-block .category-section {
   width: 100%;
@@ -75,28 +108,136 @@
   font-family: Ubuntu;
   font-weight: 500;
 }
-.category-section .content .product-box .product-details .shop-btn {
-  all: unset;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  text-transform: uppercase;
-  padding: 14px 53px;
-  background-color: var(--primary-color);
-  color: #fff;
-  font-size: 20px;
-  font-family: Ubuntu;
-  font-style: normal;
-  font-weight: 400;
-  border-radius: 6px;
-  cursor: pointer;
-}
 /* ------- category section css end ------- */
+
 /* ------- product section css start ------- */
 .main-block .our-product-section {
   width: 100%;
   background-color: #fff;
   padding: 100px 0;
+}
+.main-block .our-product-section .product-list-part {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-top: 25px;
+  gap: 15px;
+}
+.our-product-section .product-list-part .product-types {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+.our-product-section .product-list-part .product-types .types {
+  color: #928f8f;
+  font-size: 28px;
+  font-family: Ubuntu;
+  font-weight: 500;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+}
+.our-product-section .product-list-part .product-types .types::after {
+  content: "";
+  display: inline-flex;
+  height: 24px;
+  width: 3px;
+  background-color: #928f8f;
+  margin-left: 15px;
+}
+.our-product-section .product-list-part .product-types .types.last::after {
+  display: none;
+}
+.our-product-section .product-list-part .product-types .types.type-active {
+  color: #1e1c1c;
+}
+.our-product-section
+  .product-list-part
+  .product-types
+  .types.type-active::after {
+  background-color: #1e1c1c;
+}
+.our-product-section .product-list-part .list-block {
+  display: grid;
+  grid-template-columns: 24% 24% 24% 24%;
+  width: 100%;
+  gap: 20px;
+}
+.our-product-section .product-list-part .list-block .item-box {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 30px;
+  height: 100%;
+  padding: 8px 8px 16px;
+  border-radius: 6px;
+  background: #fff;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+  transition: all ease 0.3s;
+}
+.our-product-section .product-list-part .list-block .item-box:hover {
+  box-shadow: 7px 12px 15px 0px rgba(0, 0, 0, 0.2);
+}
+.our-product-section .product-list-part .list-block .item-box .image-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.our-product-section .product-list-part .list-block .item-box .image-block img {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.our-product-section .product-list-part .list-block .item-box .desc-part {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 100%;
+}
+.our-product-section
+  .product-list-part
+  .list-block
+  .item-box
+  .desc-part
+  .desc-text {
+  color: #393939;
+  font-size: 20px;
+  font-family: Poppins;
+  font-weight: 400;
+  letter-spacing: -0.3px;
+  text-transform: capitalize;
+}
+.our-product-section
+  .product-list-part
+  .list-block
+  .item-box
+  .desc-part
+  .price-part {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.our-product-section
+  .product-list-part
+  .list-block
+  .item-box
+  .desc-part
+  .price-part
+  span {
+  color: #393939;
+  font-size: 24px;
+  font-family: Ubuntu;
+  font-weight: 400;
+  letter-spacing: -0.36px;
+  text-transform: capitalize;
 }
 /* ------- product section css end ------- */
