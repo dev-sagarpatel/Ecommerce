@@ -564,7 +564,32 @@
         </section>
       </nav>
     </header>
-    <main class="main-block"></main>
+    <main class="main-block">
+      <section class="sub-header-section">
+        <div class="sub-main-first">
+          <div class="sub-first-conta">
+            <p>Search By Rego</p>
+          </div>
+
+          <div class="sub-input-box">
+            <input type="text" />
+          </div>
+          <div class="sub-input-select">
+            <select>
+              <option value="">Select Region</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="sub-main-second">
+          <div class="sub-second-first">
+            <p>Find</p>
+            <span>OR</span>
+          </div>
+          <div class="sub-second-second"><p>Search By Vehicle</p></div>
+        </div>
+      </section>
+    </main>
     <footer class="footer-section">
       <div class="top-part">
         <div class="logo-part">
@@ -906,56 +931,43 @@
       const menuButton = document.querySelector(".menu-button");
       const closeButton = document.querySelector(".close-button");
       const menuModal = document.querySelector(".menu-modal");
+      const menuModalLI = menuModal.querySelectorAll("li");
+      const menuModalTwo = document.querySelector(".menu-modal-two");
+      const menuModalTwoLi = menuModalTwo.querySelectorAll("li");
+      const menuModalTwoButton = menuModalTwo.querySelector("button");
+      const menuModalThree = document.querySelector(".menu-modal-three");
+      const menuModalThreeButton = menuModalThree.querySelector("button");
+
       menuButton.addEventListener("click", () => {
         menuButton.classList.add("hide");
         closeButton.classList.remove("hide");
         menuModal.classList.remove("hide");
       });
+
       closeButton.addEventListener("click", () => {
         menuButton.classList.remove("hide");
         closeButton.classList.add("hide");
         menuModal.classList.add("hide");
       });
-    </script>
-    <script>
-      $(".menu-modal > .modal-ul > li").click(function () {
-        var submenu = $(this).find(".menu-modal-two");
-        if (submenu.hasClass("hide")) {
-          $(".menu-modal .menu-modal-two").addClass("hide");
-          submenu.slideDown(300);
-          submenu.removeClass("hide");
-        } else {
-          submenu.slideUp(150);
-          submenu.addClass("hide");
-        }
+
+      menuModalLI.forEach((li) => {
+        li.addEventListener("click", () => {
+          menuModalTwo.classList.remove("hide");
+        });
       });
 
-      $(".menu-modal > .modal-ul > li > .menu-modal-two > ul > li").click(
-        function () {
-          var subsubmenu = $(this).find(".menu-modal-three");
-          if (subsubmenu.hasClass("hide")) {
-            $(".menu-modal .menu-modal-three").addClass("hide");
-            subsubmenu.slideDown(300);
-            subsubmenu.removeClass("hide");
-          } else {
-            subsubmenu.slideUp(150);
-            subsubmenu.addClass("hide");
-          }
-        }
-      );
-
-      $(".menu-modal .menu-modal-two button").click(function (event) {
-        var submenu = $(this).closest(".menu-modal-two");
-        submenu.slideUp(150);
-        submenu.addClass("hide");
-        event.stopPropagation();
+      menuModalTwoButton.addEventListener("click", () => {
+        menuModalTwo.classList.add("hide");
       });
 
-      $(".menu-modal .menu-modal-three button").click(function (event) {
-        var subsubmenu = $(this).closest(".menu-modal-three");
-        subsubmenu.slideUp(150);
-        subsubmenu.addClass("hide");
-        event.stopPropagation();
+      menuModalTwoLi.forEach((li) => {
+        li.addEventListener("click", () => {
+          menuModalThree.classList.remove("hide");
+        });
+      });
+
+      menuModalThreeButton.addEventListener("click", () => {
+        menuModalThree.classList.add("hide");
       });
     </script>
   </body>
