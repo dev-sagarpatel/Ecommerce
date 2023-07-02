@@ -160,10 +160,43 @@
   background-color: #1e1c1c;
 }
 .our-product-section .product-list-part .list-block {
-  display: grid;
-  grid-template-columns: 24% 24% 24% 24%;
+  display: flex;
   width: 100%;
   gap: 20px;
+}
+.our-product-section .product-list-part .list-block .owl-carousel {
+  height: 100%;
+}
+.our-product-section
+  .product-list-part
+  .list-block
+  .owl-carousel
+  .owl-stage-outer {
+  height: 900px;
+}
+.our-product-section .product-list-part .list-block .owl-carousel .owl-dots {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.our-product-section
+  .product-list-part
+  .list-block
+  .owl-carousel
+  button.owl-dot {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: #d9d9d9;
+}
+.our-product-section
+  .product-list-part
+  .list-block
+  .owl-carousel
+  button.owl-dot.active {
+  background-color: var(--primary-color);
 }
 .our-product-section .product-list-part .list-block .item-box {
   display: flex;
@@ -171,7 +204,9 @@
   flex-direction: column;
   align-items: flex-start;
   gap: 30px;
-  height: 100%;
+  height: 850px;
+  min-height: 850px;
+  max-height: 850px;
   padding: 8px 8px 16px;
   border-radius: 6px;
   background: #fff;
@@ -241,3 +276,245 @@
   text-transform: capitalize;
 }
 /* ------- product section css end ------- */
+/* ------- customer review section css start ------- */
+.main-block .customer-review {
+  width: 1oo%;
+  height: 760px;
+}
+.main-block .customer-review .content-part {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+.main-block .customer-review .content-part .left-part {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--light-bg);
+}
+.main-block .customer-review .content-part .right-part {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--dark-bg);
+}
+.customer-review .content-part .right-part .review-box {
+  display: flex;
+  width: 70%;
+  flex-direction: column;
+  padding: 35px 30px;
+  gap: 60px;
+  border-radius: 6px;
+  background: #fff;
+  box-shadow: 7px 12px 15px 0px rgba(0, 0, 0, 0.2);
+  margin-left: -620px;
+}
+.customer-review .right-part .review-box .client-info {
+  display: flex;
+  width: 100%;
+  align-items: flex-end;
+  justify-content: flex-start;
+  gap: 30px;
+}
+.customer-review .right-part .review-box .client-info .desc-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+.customer-review .right-part .review-box .client-info .desc-block h6 {
+  text-align: center;
+  font-size: 30px;
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+.customer-review .right-part .review-box .client-info .desc-block p {
+  color: #000;
+  text-align: center;
+  font-size: 22px;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 400;
+}
+.customer-review .right-part .review-box .client-comments {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 60px;
+}
+.customer-review .right-part .review-box .client-comments p {
+  color: #000;
+  font-size: 24px;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.customer-review .left-part {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+
+.customer-review .left-part .customer-say {
+  text-align: center;
+  font-size: 50px;
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 60px;
+}
+
+.customer-review .left-part .button-part {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 15px;
+}
+.customer-review .left-part .button-part .prev-btn,
+.customer-review .left-part .button-part .next-btn {
+  all: unset;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 38px;
+  font-size: 24px;
+  background-color: var(--primary-color);
+  color: #fff;
+}
+.customer-review .left-part .button-part .prev-btn {
+  margin-right: 5px;
+}
+.customer-review .left-part .button-part .next-btn {
+  margin-left: 5px;
+}
+.customer-review .left-part .button-part span {
+  display: inline-flex;
+  width: 70px;
+  height: 1px;
+  background-color: #000;
+}
+
+/* ------- customer review section css end ------- */
+/* ------- blog post section css start ------- */
+.main-block .blog-post-section {
+  width: 100%;
+  padding: 100px 0;
+}
+.blog-post-section .blog-list-part {
+  display: flex;
+  flex: 1 1 auto;
+  padding-top: 100px;
+}
+.blog-post-section .blog-list-part .blog-card {
+  display: flex;
+  flex: 1;
+  height: 870px;
+  min-height: 870px;
+  max-height: 870px;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 6px;
+  background: #fff;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+  padding: 30px;
+  gap: 20px;
+}
+.blog-post-section .blog-card .blog-content-part {
+  display: flex;
+  width: 100%;
+  height: 595px;
+  min-height: 595px;
+  max-height: 595px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+.blog-post-section .blog-list-part .blog-card .blog-content-part .image-part {
+  display: flex;
+  width: 100%;
+  height: 515px;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.blog-post-section
+  .blog-list-part
+  .blog-card
+  .blog-content-part
+  .image-part
+  img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.blog-post-section .blog-card .blog-content-part .blog-title {
+  font-size: 24px;
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: 700;
+  color: var(--primary-color);
+  text-align: left;
+}
+.blog-post-section .blog-card .blog-details {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  width: 100%;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 15px;
+}
+.blog-post-section .blog-card .blog-details .blog-text {
+  color: #000;
+  font-size: 24px;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.36px;
+  text-transform: capitalize;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.blog-post-section .blog-card .blog-details .button-part {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+.blog-post-section .blog-card .blog-details .button-part .read-more-btn {
+  color: #28a5d8;
+  font-size: 22px;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.33px;
+  text-transform: capitalize;
+  text-decoration: none;
+}
+.blog-post-section .blog-card .blog-details .blog-date {
+  color: #adadad;
+  font-size: 20px;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.3px;
+  text-transform: capitalize;
+}
+
+/* ------- blog post section css end ------- */

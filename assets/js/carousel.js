@@ -1,19 +1,39 @@
 $(document).ready(function () {
-    $('.list-block').owlCarousel({
-        items: 4, // Number of items to be displayed
-        margin: 20, // Spacing between items
-        loop: true, // Enable loop
-        nav: true, // Show navigation buttons
-        dots: false, // Hide pagination dots
+    $('.owl-carousel').owlCarousel({
+        items: 4, 
+        margin: 20, 
+        loop: true, 
+        nav: false,
+        dots: true,
+        dotsEach: true,
         responsive: {
             0: {
-                items: 1 // Number of items to be displayed on small screens
+                items: 1 
             },
             768: {
-                items: 2 // Number of items to be displayed on medium screens
+                items: 2 
             },
             1024: {
-                items: 4 // Number of items to be displayed on larger screens
+                items: 4 
+            }
+        }
+    });
+
+    $('.owl-carousel .blog-articles').owlCarousel({
+        items: 3, 
+        margin: 40, 
+        loop: true, 
+        nav: false,
+        dots: true,
+        responsive: {
+            0: {
+                items: 1
+            },
+            768: {
+                items: 2
+            },
+            1024: {
+                items: 3
             }
         }
     });
