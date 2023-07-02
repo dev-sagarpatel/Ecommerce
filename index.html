@@ -12,6 +12,8 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     />
+    <link rel="stylesheet" href="./assets/css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="./assets/css/owl.theme.default.min.css" />
     <link rel="stylesheet" href="./assets/css/common.css" />
     <link rel="stylesheet" href="./assets/css/home.css" />
     <title>Home</title>
@@ -651,14 +653,19 @@
               <p class="types">fearured</p>
               <p class="types last">clearance</p>
             </div>
-            <div class="list-block">
+            <div class="list-block owl-carousel">
               <div class="item-box">
                 <div class="image-block">
-                  <img src="./assets/images/home/product-1.png" alt="product-img" />
+                  <img
+                    src="./assets/images/home/product-1.png"
+                    alt="product-img"
+                  />
                 </div>
                 <div class="desc-part">
-                  <p class="desc-text">superior remote Reservoir ECDS 2.52 Inch (50mm) Lift Kit Suitable For Toyota
-                    landcruiser 300 Series (Kit)</p>
+                  <p class="desc-text">
+                    superior remote Reservoir ECDS 2.52 Inch (50mm) Lift Kit
+                    Suitable For Toyota landcruiser 300 Series (Kit)
+                  </p>
                   <div class="price-part">
                     <span>$4,065.00</span>
                     <button class="shop-btn">shop</button>
@@ -667,10 +674,15 @@
               </div>
               <div class="item-box">
                 <div class="image-block">
-                  <img src="./assets/images/home/product-2.png" alt="product-img" />
+                  <img
+                    src="./assets/images/home/product-2.png"
+                    alt="product-img"
+                  />
                 </div>
                 <div class="desc-part">
-                  <p class="desc-text">PRO EAGLE 3 Ton Big Wheel Off Road jack</p>
+                  <p class="desc-text">
+                    PRO EAGLE 3 Ton Big Wheel Off Road jack
+                  </p>
                   <div class="price-part">
                     <span>$1,299.00</span>
                     <button class="shop-btn">shop</button>
@@ -679,10 +691,17 @@
               </div>
               <div class="item-box">
                 <div class="image-block">
-                  <img src="./assets/images/home/product-4.png" alt="product-img" />
+                  <img
+                    src="./assets/images/home/product-4.png"
+                    alt="product-img"
+                  />
                 </div>
                 <div class="desc-part">
-                  <p class="desc-text">superior Monotube IFP 2.0 Pre-Assembled Struts front 2-3 inch (50-75) Lift Suitable for toyota Hilux revo 2015 on (Pair)</p>
+                  <p class="desc-text">
+                    superior Monotube IFP 2.0 Pre-Assembled Struts front 2-3
+                    inch (50-75) Lift Suitable for toyota Hilux revo 2015 on
+                    (Pair)
+                  </p>
                   <div class="price-part">
                     <span>$1,167.00</span>
                     <button class="shop-btn">shop</button>
@@ -691,12 +710,17 @@
               </div>
               <div class="item-box">
                 <div class="image-block">
-                  <img src="./assets/images/home/product-3.png" alt="product-img" />
+                  <img
+                    src="./assets/images/home/product-3.png"
+                    alt="product-img"
+                  />
                 </div>
                 <div class="desc-part">
-                  <p class="desc-text">superior Electric (ECDS) In cab Adjustable 2.5 monotube Remote Reservoir shock Kit 
-                    4 Inch (100mm) Lift Suitable for Nissan
-                    patrol gQ/gU (Kit) (Shock kit Only)</p>
+                  <p class="desc-text">
+                    superior Electric (ECDS) In cab Adjustable 2.5 monotube
+                    Remote Reservoir shock Kit 4 Inch (100mm) Lift Suitable for
+                    Nissan patrol gQ/gU (Kit) (Shock kit Only)
+                  </p>
                   <div class="price-part">
                     <span>$3,200.00</span>
                     <button class="shop-btn">shop</button>
@@ -971,122 +995,10 @@
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script src="./assets/js/owl.carousel.min.js"></script>
     <script src="./assets/js/bootstrap.bundle.min.js"></script>
-    <script>
-      $(document).ready(function () {
-        // Create an array of country objects with image and text properties
-        var countries = [
-          {
-            id: "aus",
-            text: "AUS",
-            image: "./assets/images/header/australia-flag-icon.svg",
-          },
-          {
-            id: "ind",
-            text: "IND",
-            image: "./assets/images/header/india-flag-icon.svg",
-          },
-          {
-            id: "usa",
-            text: "USA",
-            image: "./assets/images/header/united-states-flag-icon.svg",
-          },
-          {
-            id: "uk",
-            text: "UK",
-            image: "./assets/images/header/united-kingdom-flag-icon.svg",
-          },
-          {
-            id: "ca",
-            text: "CA",
-            image: "./assets/images/header/canada-flag-icon.svg",
-          },
-        ];
-
-        var options = countries.map(function (country) {
-          return {
-            id: country.id,
-            text: country.text,
-            image: country.image,
-          };
-        });
-
-        $(".country-select").select2({
-          minimumResultsForSearch: Infinity,
-          data: options,
-          templateResult: formatCountryOption,
-          templateSelection: formatSelectedCountry,
-        });
-
-        function formatCountryOption(country) {
-          if (!country.image) {
-            return country.text;
-          }
-          return $(
-            '<span><img class="flag-icon" src="' +
-              country.image +
-              '" /> ' +
-              country.text +
-              "</span>"
-          );
-        }
-
-        function formatSelectedCountry(country) {
-          if (!country.image) {
-            return country.text;
-          }
-          return $(
-            '<span><img class="flag-icon" src="' +
-              country.image +
-              '" /> ' +
-              country.text +
-              "</span>"
-          );
-        }
-      });
-    </script>
-    <script>
-      const menuButton = document.querySelector(".menu-button");
-      const closeButton = document.querySelector(".close-button");
-      const menuModal = document.querySelector(".menu-modal");
-      const menuModalLI = menuModal.querySelectorAll("li");
-      const menuModalTwo = document.querySelector(".menu-modal-two");
-      const menuModalTwoLi = menuModalTwo.querySelectorAll("li");
-      const menuModalTwoButton = menuModalTwo.querySelector("button");
-      const menuModalThree = document.querySelector(".menu-modal-three");
-      const menuModalThreeButton = menuModalThree.querySelector("button");
-
-      menuButton.addEventListener("click", () => {
-        menuButton.classList.add("hide");
-        closeButton.classList.remove("hide");
-        menuModal.classList.remove("hide");
-      });
-
-      closeButton.addEventListener("click", () => {
-        menuButton.classList.remove("hide");
-        closeButton.classList.add("hide");
-        menuModal.classList.add("hide");
-      });
-
-      menuModalLI.forEach((li) => {
-        li.addEventListener("click", () => {
-          menuModalTwo.classList.remove("hide");
-        });
-      });
-
-      menuModalTwoButton.addEventListener("click", () => {
-        menuModalTwo.classList.add("hide");
-      });
-
-      menuModalTwoLi.forEach((li) => {
-        li.addEventListener("click", () => {
-          menuModalThree.classList.remove("hide");
-        });
-      });
-
-      menuModalThreeButton.addEventListener("click", () => {
-        menuModalThree.classList.add("hide");
-      });
-    </script>
+    <script src="./assets/js/select2.js"></script>
+    <script src="./assets/js/script.js"></script>
+    
   </body>
 </html>
