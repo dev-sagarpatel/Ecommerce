@@ -542,6 +542,256 @@
 }
 /* ------- blog post section css end ------- */
 
+/* ------- insta section css start ------- */
+
+.insta-reels {
+  padding: 4rem 2rem;
+  background-color: var(--light-bg);
+}
+
+.insta-reels h2 {
+  text-align: center;
+  padding-bottom: 15px;
+  border-bottom: 5px solid var(--primary-color);
+  width: fit-content;
+  margin: auto;
+  margin-bottom: 2rem;
+  color: #1e1c1c;
+  text-align: center;
+  font-size: 50px;
+  font-family: Ubuntu;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.insta-list-main {
+  overflow: scroll;
+}
+
+.insta-list-main::-webkit-scrollbar {
+  width: 0;
+  display: none;
+}
+
+.insta-list {
+  display: inline-flex;
+  gap: 2rem;
+  padding-bottom: 10px;
+}
+
+.insta-one {
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.25);
+  padding-bottom: 15px;
+}
+
+.insta-one:hover {
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.insta-one img {
+  height: 350px;
+  width: 350px;
+}
+
+.insta-details {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 1rem;
+}
+
+/* ------- insta section css end ------- */
+
+/* ------- follow section css start ------- */
+
+.follow-us {
+  padding: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.follow-us-box {
+  width: 400px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.follow-us h2 {
+  font-size: 28px;
+  border-bottom: 5px solid var(--primary-color);
+  width: fit-content;
+  margin-bottom: 1rem;
+  padding-bottom: 15px;
+  color: #1e1c1c;
+  text-align: center;
+  font-size: 50px;
+  font-family: Ubuntu;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.follow-us-img {
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+}
+
+.follow-us-img img {
+  width: 75px;
+}
+
+/* ------- follow section css end ------- */
+
+/* ------- news-letter section css start ------- */
+
+.news-letter {
+  background-image: url(../images/home/buggy2.png);
+  height: 400px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.news-letter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.news-letter div {
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.news-letter h2 {
+  color: var(--light-bg);
+  letter-spacing: 1px;
+  padding-bottom: 2rem;
+}
+
+.news-letter form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.news-letter input {
+  border: none;
+  outline: none;
+  padding: 10px;
+  width: 100%;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.news-letter button {
+  border: navy;
+  background-color: var(--primary-color);
+  color: var(--light-bg);
+  padding: 10px 30px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+/* ------- news-letter section css end ------- */
+
+/* ------- contact section css start ------- */
+
+.contact-main {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.canvass {
+  width: 100% !important;
+  height: 400 !important;
+}
+
+iframe {
+  width: 100%;
+  height: 620px !important;
+}
+
+.form-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 70%;
+  margin: auto;
+}
+
+.form-wrap h2 {
+  border-bottom: 5px solid var(--primary-color);
+  padding-bottom: 15px;
+  margin-bottom: 2rem;
+  padding-top: 20px;
+  color: #1e1c1c;
+  text-align: center;
+  font-size: 50px;
+  font-family: Ubuntu;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.form-wrap form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.form-wrap fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 100%;
+}
+
+.form-wrap input {
+  width: 100%;
+  padding: 8px;
+  outline: none;
+  border-radius: 5px;
+  border: 2px solid silver;
+}
+
+.form-wrap label {
+  font-weight: 600;
+}
+
+.form-wrap textarea {
+  padding: 8px;
+  outline: none;
+  font-size: 1rem;
+  min-width: 100%;
+  max-height: 100px;
+  min-height: 100px;
+  max-width: 100%;
+}
+
+.form-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-button button {
+  background-color: var(--primary-color);
+  color: var(--light-bg);
+  padding: 8px 40px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+}
+
+/* ------- contact section css end ------- */
 /* --------- responsive css start --------- */
 
 @media screen and (max-width: 1600px) {
@@ -696,6 +946,11 @@
   .blog-post-section .blog-card .blog-details .blog-date {
     font-size: 16px;
   }
+  .insta-reels h2,
+  .follow-us h2,
+  .form-wrap h2 {
+    font-size: 42px;
+  }
 }
 
 @media screen and (max-width: 1281px) {
@@ -747,6 +1002,11 @@
   .our-product-section .product-list-part .product-types .types::after {
     height: 20px;
     width: 2px;
+  }
+  .insta-reels h2,
+  .follow-us h2,
+  .form-wrap h2 {
+    font-size: 36px;
   }
 }
 
@@ -856,12 +1116,48 @@
     padding: 45px 0 180px;
     gap: 15px;
   }
+  .insta-reels h2,
+  .follow-us h2,
+  .form-wrap h2 {
+    font-size: 30px;
+  }
+}
+@media (max-width: 820px) {
+  .news-letter {
+    background-position: calc(-500px);
+  }
+  .contact-main {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-form {
+    padding-bottom: 2rem;
+  }
 }
 @media screen and (max-width: 768px) {
   .our-product-section .product-list-part .list-block .item-box,
   .blog-post-section .blog-list-part .blog-card {
     width: 70%;
     margin: 0 auto;
+  }
+  .contact-form {
+    width: 100%;
+  }
+
+  .contact-form h2 {
+    padding-top: 3rem;
+  }
+
+  .form-wrap {
+    width: 90%;
+  }
+
+  .contact-form button {
+    width: 100%;
+  }
+
+  iframe {
+    height: 400px !important;
   }
 }
 @media screen and (max-width: 576px) {
@@ -1010,6 +1306,25 @@
   .main-block .hero-section .banner-img {
     height: 100%;
   }
+  .follow-us-img {
+    gap: 2rem;
+  }
+  .follow-us h2 {
+    margin-bottom: 2.5rem;
+  }
+  .news-letter {
+    background-position: calc(-600px);
+  }
+
+  .news-letter div {
+    width: 90%;
+  }
+  .insta-reels h2,
+  .follow-us h2,
+  .form-wrap h2 {
+    font-size: 22px;
+    border-bottom: 3px solid var(--primary-color);
+  }
 }
 
 @media screen and (max-width: 426px) {
@@ -1031,7 +1346,7 @@
     width: 80%;
     margin: 0 auto;
   }
-  .category-section .content .product-box:last-child{
+  .category-section .content .product-box:last-child {
     border-bottom: none;
     padding-bottom: 0;
   }
