@@ -1325,6 +1325,9 @@ iframe {
     font-size: 22px;
     border-bottom: 3px solid var(--primary-color);
   }
+  .follow-us-img img {
+    width: 50px;
+  }
 }
 
 @media screen and (max-width: 426px) {
