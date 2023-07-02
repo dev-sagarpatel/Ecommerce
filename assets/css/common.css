@@ -430,6 +430,11 @@ li {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 16px;
+}
+
+.sub-first-conta img {
+  width: 35px;
 }
 
 .sub-first-conta p {
@@ -519,9 +524,197 @@ li {
   align-items: center;
   justify-content: center;
   border-radius: 5px;
+  gap: 1rem;
+}
+
+.sub-second-second img {
+  width: 25px;
+}
+
+.sub-main-second p {
+  white-space: nowrap;
 }
 
 /* ------- section section css end ------- */
+
+/* ------- follow section css start ------- */
+
+.follow-us {
+  padding: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.follow-us-box {
+  width: 400px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.follow-us h2 {
+  font-size: 28px;
+  border-bottom: 2px solid var(--primary-color);
+  width: fit-content;
+  margin-bottom: 1rem;
+  padding-bottom: 7px;
+}
+
+.follow-us-img {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.follow-us-img img {
+  width: 50px;
+}
+
+/* ------- follow section css end ------- */
+
+/* ------- news-letter section css start ------- */
+
+.news-letter {
+  background-image: url(../images/home/buggy2.png);
+  height: 400px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.news-letter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.news-letter div {
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.news-letter h2 {
+  color: var(--light-bg);
+  letter-spacing: 1px;
+  padding-bottom: 2rem;
+}
+
+.news-letter form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.news-letter input {
+  border: none;
+  outline: none;
+  padding: 10px;
+  width: 100%;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.news-letter button {
+  border: navy;
+  background-color: var(--primary-color);
+  color: var(--light-bg);
+  padding: 10px 30px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+/* ------- news-letter section css end ------- */
+
+/* ------- contact section css start ------- */
+
+.contact-main {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.canvass {
+  width: 100% !important;
+  height: 400 !important;
+}
+
+iframe {
+  width: 100%;
+  height: 620px !important;
+}
+
+.form-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 70%;
+  margin: auto;
+}
+
+.form-wrap h2 {
+  border-bottom: 2px solid var(--primary-color);
+  padding-bottom: 3px;
+  margin-bottom: 3rem;
+  padding-top: 20px;
+}
+
+.form-wrap form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.form-wrap fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 100%;
+}
+
+.form-wrap input {
+  width: 100%;
+  padding: 8px;
+  outline: none;
+  border-radius: 5px;
+  border: 2px solid silver;
+}
+
+.form-wrap label {
+  font-weight: 600;
+}
+
+.form-wrap textarea {
+  padding: 8px;
+  outline: none;
+  font-size: 1rem;
+  min-width: 100%;
+  max-height: 100px;
+  min-height: 100px;
+  max-width: 100%;
+}
+
+.form-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-button button {
+  background-color: var(--primary-color);
+  color: var(--light-bg);
+  padding: 8px 40px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+}
+
+/* ------- contact section css end ------- */
 
 /* ------- footer section css start ------- */
 
