@@ -278,7 +278,7 @@
 /* ------- product section css end ------- */
 /* ------- customer review section css start ------- */
 .main-block .customer-review {
-  width: 1oo%;
+  width: 100%;
   height: 760px;
 }
 .main-block .customer-review .content-part {
@@ -336,7 +336,7 @@
 }
 .customer-review .right-part .review-box .client-info .desc-block p {
   color: #000;
-  text-align: center;
+  text-align: left;
   font-size: 22px;
   font-family: Poppins;
   font-style: normal;
@@ -430,6 +430,9 @@
   padding: 30px;
   gap: 20px;
 }
+.blog-post-section .blog-list-part .blog-card:hover {
+  box-shadow: 7px 12px 15px 0px rgba(0, 0, 0, 0.2);
+}
 .blog-post-section .blog-card .blog-content-part {
   display: flex;
   width: 100%;
@@ -454,7 +457,6 @@
   .image-part
   img {
   height: 100%;
-  width: 100%;
   object-fit: cover;
   object-position: center;
 }
@@ -516,5 +518,212 @@
   letter-spacing: -0.3px;
   text-transform: capitalize;
 }
-
+.blog-post-section .blog-list-part .owl-carousel .owl-stage-outer {
+  height: 900px;
+}
+.blog-post-section .blog-list-part .owl-carousel .owl-dots {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.blog-post-section .blog-list-part .owl-carousel button.owl-dot {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: #d9d9d9;
+}
+.blog-post-section .blog-list-part .owl-carousel button.owl-dot.active {
+  background-color: var(--primary-color);
+}
 /* ------- blog post section css end ------- */
+
+/* --------- responsive css start --------- */
+
+@media screen and (max-width: 1600px) {
+  .category-section .content .product-box .product-details h5 {
+    font-size: 30px;
+  }
+  .main-block .shop-btn {
+    padding: 10px 43px;
+  }
+  .our-product-section .product-list-part .list-block .item-box {
+    height: 765px;
+    min-height: 765px;
+    max-height: 765px;
+  }
+  .our-product-section
+    .product-list-part
+    .list-block
+    .owl-carousel
+    .owl-stage-outer {
+    height: 815px;
+  }
+  .customer-review .content-part .right-part .review-box {
+    margin-left: -480px;
+  }
+
+  .customer-review .right-part .review-box .client-info .desc-block p {
+    font-size: 18px;
+  }
+
+  .customer-review .right-part .review-box .client-comments p {
+    font-size: 20px;
+  }
+  .customer-review .right-part .review-box .client-info .image-block {
+    width: 20%;
+  }
+  .customer-review .right-part .review-box .client-info .image-block img {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .main-block .section-heading-block .section-heading-text {
+    font-size: 42px;
+  }
+
+  .main-block .section-heading-block .head-text-underline {
+    width: 12%;
+  }
+
+  .our-product-section .product-list-part .product-types .types {
+    font-size: 24px;
+  }
+  .our-product-section .product-list-part .list-block .item-box {
+    height: 690px;
+    min-height: 690px;
+    max-height: 690px;
+    gap: 20px;
+  }
+  .our-product-section
+    .product-list-part
+    .list-block
+    .item-box
+    .desc-part
+    .desc-text {
+    font-size: 18px;
+  }
+  .our-product-section
+    .product-list-part
+    .list-block
+    .item-box
+    .desc-part
+    .price-part
+    span {
+    font-size: 22px;
+  }
+  .our-product-section
+    .product-list-part
+    .list-block
+    .owl-carousel
+    .owl-stage-outer {
+    height: 740px;
+  }
+  .main-block .shop-btn {
+    font-size: 18px;
+  }
+  .our-product-section
+    .product-list-part
+    .list-block
+    .owl-carousel
+    button.owl-dot,
+  .blog-post-section .blog-list-part .owl-carousel button.owl-dot {
+    height: 16px;
+    width: 16px;
+  }
+  .customer-review .left-part .customer-say {
+    font-size: 42px;
+    line-height: 54px;
+  }
+  .customer-review .left-part .button-part .prev-btn,
+  .customer-review .left-part .button-part .next-btn {
+    width: 36px;
+    height: 30px;
+    font-size: 20px;
+  }
+  .customer-review .left-part .button-part span {
+    width: 60px;
+  }
+  .customer-review .content-part .right-part .review-box {
+    margin-left: -450px;
+    gap: 45px;
+    padding: 30px;
+  }
+  .customer-review .right-part .review-box .client-comments {
+    margin-bottom: 40px;
+  }
+  .main-block .customer-review {
+    height: 680px;
+  }
+  .customer-review .right-part .review-box .client-info .desc-block h6 {
+    font-size: 26px;
+  }
+  .blog-post-section .blog-list-part .blog-card {
+    height: 670px;
+    min-height: 670px;
+    max-height: 670px;
+    padding: 25px;
+  }
+  .blog-post-section .blog-list-part .blog-card .blog-content-part .image-part {
+    height: 360px;
+  }
+  .blog-post-section .blog-card .blog-content-part {
+    min-height: 420px;
+    height: 420px;
+    max-height: 420px;
+    gap: 15px;
+  }
+  .blog-post-section .blog-list-part .owl-carousel .owl-stage-outer {
+    height: 720px;
+  }
+  .blog-post-section .blog-list-part {
+    padding-top: 70px;
+  }
+  .blog-post-section .blog-card .blog-content-part .blog-title {
+    font-size: 18px;
+  }
+  .blog-post-section .blog-card .blog-details .blog-text {
+    font-size: 18px;
+  }
+  .blog-post-section .blog-card .blog-details .button-part .read-more-btn {
+    font-size: 18px;
+  }
+  .blog-post-section .blog-card .blog-details .blog-date {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 1281px) {
+  .category-section .content .product-box .product-details h5 {
+    font-size: 24px;
+  }
+  .main-block .shop-btn{
+    padding: 10px 33px;
+  }
+  .our-product-section .product-list-part .list-block .item-box{
+    height: 640px;
+    min-height: 640px;
+    max-height: 640px;
+  }
+  .our-product-section .product-list-part .list-block .item-box .desc-part .desc-text{
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .our-product-section .product-list-part .list-block .owl-carousel .owl-stage-outer{
+    height: 690px;
+  }
+  .customer-review .content-part .right-part .review-box{
+    margin-left: -300px;
+  }
+  .customer-review .content-part .right-part .review-box{
+    width: 85%;
+  }
+  .customer-review .left-part .customer-say{
+    font-size: 36px;
+    line-height: 48px;
+  }
+}

@@ -1268,5 +1268,25 @@
     <script src="./assets/js/select2.js"></script>
     <script src="./assets/js/script.js"></script>
     <script src="./assets/js/carousel.js"></script>
+    <script>
+      $(".owl-carousel.blog-articles").owlCarousel({
+        items: 3,
+        margin: 40,
+        loop: true,
+        nav: false,
+        dots: true,
+        responsive: {
+          0: {
+            items: 1,
+          },
+          768: {
+            items: 2,
+          },
+          1024: {
+            items: 3,
+          },
+        },
+      });
+    </script>
   </body>
 </html>
